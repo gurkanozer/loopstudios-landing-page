@@ -1,0 +1,43 @@
+.our-creations{
+    margin-top: 4.2rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    padding:2.4rem;
+    &__header{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-transform: uppercase;
+        margin-bottom: 5.2rem;
+    }
+    &__nav{
+        display: flex;
+        flex-direction: column;
+        gap: 2.4rem;
+        justify-content: center;
+        align-items: center;
+    }
+    &__nav-item{
+        text-transform: uppercase;
+        a{
+            position: relative;
+            span{
+                position: absolute;
+                bottom: 2.4rem;
+                left:1.8rem;
+                z-index: 10;
+                width: 11rem;
+                font-size:1.8rem;
+                font-family: $font-secondary;
+                color:$color-white;
+            }
+        }
+    }
+    &__btn-sm{
+        border:2px solid $color-gray-bold;
+        color:$color-black;
+        font-size: 1.6rem;
+        letter-spacing: 0.4rem;
+        padding:0.6rem 4.2rem;
+    }
+}
