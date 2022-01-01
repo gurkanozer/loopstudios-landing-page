@@ -44,6 +44,14 @@ p{
     margin:0 auto;
     padding:1.6rem;
 }
+.btn{
+    border:2px solid $color-gray-bold;
+    color:$color-black;
+    font-size: 1.6rem;
+    letter-spacing: 0.4rem;
+    padding:0.6rem 4.2rem;
+    text-align: center;
+}
 @media screen and(min-width:$sm-screen){
     h1{
         font-size:6.6rem;
