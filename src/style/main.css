@@ -481,6 +481,10 @@ header .header__toggle-btn {
   outline: none;
 }
 
+header .header__toggle-btn.active {
+  background: url("../../images/icon-close.svg") no-repeat center center;
+}
+
 .navbar {
   width: 100%;
   height: calc(100vh - 6.6rem);
@@ -508,6 +512,15 @@ header .header__toggle-btn {
 }
 
 @media screen and (min-width: 768px) {
+  header {
+    background: none;
+  }
+  header.active.scrolled {
+    background: rgba(0, 0, 0, 0.8);
+  }
+  header.active {
+    background: none;
+  }
   header.scrolled .header__container {
     padding-top: 2rem;
   }

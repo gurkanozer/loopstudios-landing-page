@@ -3,7 +3,6 @@ header{
     width:100%;
     top:0;
     left:0;
-    // background: $color-black;
     color:$color-white;
     z-index: 110;
     &.scrolled{
@@ -37,6 +36,9 @@ header{
         background-size: cover;
         border:none;
         outline:none;
+        &.active{
+            background: url('../../images/icon-close.svg') no-repeat center center;
+        }
     }
 }
 
@@ -64,6 +66,13 @@ header{
 
 @media screen and(min-width:$md-screen){
     header{
+        background: none;
+        &.active.scrolled{
+            background: rgba(0,0,0,0.8);
+        }
+        &.active{
+            background:none;
+        }
         &.scrolled{
             .header__container{
                 padding-top: 2rem;
