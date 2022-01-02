@@ -1,0 +1,108 @@
+header{
+    position: fixed;
+    width:100%;
+    top:0;
+    left:0;
+    // background: $color-black;
+    color:$color-white;
+    z-index: 110;
+    &.scrolled{
+        background: rgba(0,0,0,0.8);
+    }
+    &.active{
+        background: $color-black;
+    }
+    .header__container{
+        width:100%;
+        max-width: 114.5rem;
+        margin:0 auto;
+        padding:0 2.4rem;
+    }
+    .header__brand{
+        padding-top:4rem;
+        padding-bottom: 2rem;
+        width:100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        img{
+            width: auto;
+            height:2.4rem;
+        }
+    }
+    .header__toggle-btn{
+        width:2.4rem;
+        height:1.6rem;
+        background: url('../../images/icon-hamburger.svg') no-repeat center center;
+        background-size: cover;
+        border:none;
+        outline:none;
+    }
+}
+
+.navbar{
+    width:100%;
+    height:calc(100vh - 6.6rem);
+    overflow-y: scroll;
+    display:none;
+    &.active{
+        display: block;
+    }
+    &__nav{
+        margin-top: 50%;
+        min-height: 30rem;
+    }
+    &__item{
+        padding:1.2rem 0;
+    }
+    &__link{
+        font-size:2.4rem;
+        font-family: $font-secondary;
+        text-transform: uppercase;
+    }
+}
+
+@media screen and(min-width:$md-screen){
+    header{
+        &.scrolled{
+            .header__container{
+                padding-top: 2rem;
+            }
+        }
+        .header__toggle-btn{
+            display: none;
+        }
+        .header__container{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-top: 6rem;
+            padding-bottom: 2rem;
+        }
+        .header__brand{
+            padding:0;
+            width: auto;
+            img{
+                height:3.2rem;
+            }
+        }
+    }
+    .navbar{
+        display:block;
+        height: auto;
+        overflow-y: hidden;
+        &__nav{
+            display: flex;
+            margin-top: 0;
+            min-height:auto;
+            justify-content: right;
+        }
+        &__item{
+            padding-left: 3rem;
+        }
+        &__link{
+            text-transform: capitalize;
+            font-size:1.6rem;
+        }
+    }
+}
