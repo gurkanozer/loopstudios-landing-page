@@ -45,13 +45,13 @@ header{
 .navbar{
     width:100%;
     height:calc(100vh - 6.6rem);
-    overflow-y: scroll;
+    overflow-y: auto;
     display:none;
     &.active{
         display: block;
     }
     &__nav{
-        margin-top: 50%;
+        margin-top: 20vh;
         min-height: 30rem;
     }
     &__item{
@@ -112,6 +112,24 @@ header{
         &__link{
             text-transform: capitalize;
             font-size:1.6rem;
+            position: relative;
+            
+            &::after{
+                content: '';
+                position: absolute;
+                bottom: -0.5rem;
+                left: 50%;
+                transform: translateX(-50%);
+                transition: width .2s ease;
+                width:0;
+                height:0.2rem;
+                background-color: $color-white;
+            }
+            &:hover{
+                &::after{
+                    width:50%;
+                }
+            }
         }
     }
 }

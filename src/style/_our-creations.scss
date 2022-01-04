@@ -82,6 +82,9 @@
 
 @media screen and(min-width:$lg-screen) {
     .our-creations{
+        &__header{
+            margin-bottom: 8.2rem;
+        }
         &__nav-item{
             text-transform: uppercase;
             a{

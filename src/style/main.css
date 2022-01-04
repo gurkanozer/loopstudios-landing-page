@@ -61,6 +61,13 @@ p {
   letter-spacing: 0.4rem;
   padding: 0.6rem 4.2rem;
   text-align: center;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: black;
+  color: white;
+  border: 2px solid black;
 }
 
 @media screen and (min-width: 576px) {
@@ -168,6 +175,9 @@ p {
 }
 
 @media screen and (min-width: 1140px) {
+  .interactive {
+    margin: 16rem 0;
+  }
   .interactive__img {
     width: 100%;
     max-width: 64%;
@@ -291,6 +301,9 @@ p {
 }
 
 @media screen and (min-width: 1140px) {
+  .our-creations__header {
+    margin-bottom: 8.2rem;
+  }
   .our-creations__nav-item {
     text-transform: uppercase;
   }
@@ -377,11 +390,36 @@ footer .footer__socials {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
   gap: 1.6rem;
 }
 
 footer .footer__copy {
-  padding-top: 1.2rem;
+  padding-top: 1.6rem;
+}
+
+footer .footer__nav-link, footer .footer__socials-link {
+  position: relative;
+}
+
+footer .footer__nav-link::after, footer .footer__socials-link::after {
+  content: '';
+  position: absolute;
+  bottom: -0.5rem;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  -webkit-transition: width .2s ease;
+  transition: width .2s ease;
+  width: 0;
+  height: 0.2rem;
+  background-color: white;
+}
+
+footer .footer__nav-link:hover::after, footer .footer__socials-link:hover::after {
+  width: 100%;
 }
 
 @media screen and (min-width: 576px) {
@@ -417,6 +455,10 @@ footer .footer__copy {
 }
 
 @media screen and (min-width: 1140px) {
+  footer {
+    padding: 2.4rem;
+    margin-top: 18.3rem;
+  }
   footer .footer__nav {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -425,6 +467,20 @@ footer .footer__copy {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+    margin: 0;
+    padding: 0;
+  }
+  footer .footer__nav-item {
+    padding: 2.4rem 2.8rem 0 0;
+  }
+  footer .footer__right {
+    margin: 0;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+  }
+  footer .footer__copy {
+    padding-top: 2.4rem;
   }
 }
 
@@ -488,7 +544,7 @@ header .header__toggle-btn.active {
 .navbar {
   width: 100%;
   height: calc(100vh - 6.6rem);
-  overflow-y: scroll;
+  overflow-y: auto;
   display: none;
 }
 
@@ -497,7 +553,7 @@ header .header__toggle-btn.active {
 }
 
 .navbar__nav {
-  margin-top: 50%;
+  margin-top: 20vh;
   min-height: 30rem;
 }
 
@@ -568,6 +624,23 @@ header .header__toggle-btn.active {
   .navbar__link {
     text-transform: capitalize;
     font-size: 1.6rem;
+    position: relative;
+  }
+  .navbar__link::after {
+    content: '';
+    position: absolute;
+    bottom: -0.5rem;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    -webkit-transition: width .2s ease;
+    transition: width .2s ease;
+    width: 0;
+    height: 0.2rem;
+    background-color: white;
+  }
+  .navbar__link:hover::after {
+    width: 50%;
   }
 }
 /*# sourceMappingURL=main.css.map */

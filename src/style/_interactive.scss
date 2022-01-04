@@ -42,6 +42,7 @@
 }
 @media screen and(min-width:$lg-screen){
     .interactive{
+        margin: 16rem 0;
         &__img{
             width:100%;
             max-width:64%;

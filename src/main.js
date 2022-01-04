@@ -1,3 +1,5 @@
+import "./style/main.css";
+
 const header = document.querySelector("header");
 const navbar = document.querySelector(".navbar");
 const btnToggle = document.querySelector(".header__toggle-btn");
@@ -16,7 +18,7 @@ document.addEventListener("scroll",()=>{
         header.classList.add("scrolled");
     else header.classList.remove("scrolled");
     });
-    
+
 //Window Resize
 
 window.addEventListener('resize', ()=>{

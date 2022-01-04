@@ -51,6 +51,12 @@ p{
     letter-spacing: 0.4rem;
     padding:0.6rem 4.2rem;
     text-align: center;
+    cursor: pointer;
+    &:hover{
+        background-color: $color-black;
+        color:$color-white;
+        border:2px solid $color-black;
+    }
 }
 @media screen and(min-width:$sm-screen){
     h1{
