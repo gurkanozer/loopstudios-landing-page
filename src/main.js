@@ -22,7 +22,10 @@ document.addEventListener("scroll",()=>{
 //Window Resize
 
 window.addEventListener('resize', ()=>{
-    navbar.classList.remove("active");
-    navbar.classList.remove("active");
-    header.classList.remove("active");
+    let width = window.innerWidth;
+    if(width> 768){
+        navbar.classList.remove("active");
+        navbar.classList.remove("active");
+        header.classList.remove("active");
+    }
 });

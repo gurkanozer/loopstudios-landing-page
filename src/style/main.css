@@ -535,6 +535,7 @@ header .header__toggle-btn {
   background-size: cover;
   border: none;
   outline: none;
+  cursor: pointer;
 }
 
 header .header__toggle-btn.active {

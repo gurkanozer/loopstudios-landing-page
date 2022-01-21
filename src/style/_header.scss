@@ -36,6 +36,7 @@ header{
         background-size: cover;
         border:none;
         outline:none;
+        cursor:pointer;
         &.active{
             background: url('../../images/icon-close.svg') no-repeat center center;
         }
