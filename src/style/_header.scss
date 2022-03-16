@@ -76,7 +76,8 @@ header{
         }
         &.scrolled{
             .header__container{
-                padding-top: 2rem;
+                padding-top: 0.8rem;
+                padding-bottom:0.6rem;
             }
         }
         .header__toggle-btn{

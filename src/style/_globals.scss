@@ -1,4 +1,4 @@
-html { font-size: 62.5%; } 
+html { font-size: 10px; } 
 body { 
     font-size: 1.5rem; 
     font-family: $font-primary;
@@ -52,11 +52,31 @@ p{
     padding:0.6rem 4.2rem;
     text-align: center;
     cursor: pointer;
-    &:hover{
-        background-color: $color-black;
-        color:$color-white;
-        border:2px solid $color-black;
+    position: relative;
+    z-index:1;
+    
+  &::before {
+    transition: 0.3s all ease;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    right: 50%;
+    bottom: 0;
+    opacity: 0;
+    content: "";
+    background-color: $color-black;
+    border:2px solid $color-black;
+}
+&:hover {
+    color:$color-white;
+    &::before {
+      transition: 0.5s all ease;
+      left: 0;
+      right: 0;
+      opacity: 1;
+      z-index: -1;
     }
+  }
 }
 @media screen and(min-width:$sm-screen){
     h1{

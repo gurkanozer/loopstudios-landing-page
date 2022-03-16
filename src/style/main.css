@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:wght@300&display=swap");
 html {
-  font-size: 62.5%;
+  font-size: 10px;
 }
 
 body {
@@ -62,12 +62,35 @@ p {
   padding: 0.6rem 4.2rem;
   text-align: center;
   cursor: pointer;
+  position: relative;
+  z-index: 1;
+}
+
+.btn::before {
+  -webkit-transition: 0.3s all ease;
+  transition: 0.3s all ease;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  right: 50%;
+  bottom: 0;
+  opacity: 0;
+  content: "";
+  background-color: black;
+  border: 2px solid black;
 }
 
 .btn:hover {
-  background-color: black;
   color: white;
-  border: 2px solid black;
+}
+
+.btn:hover::before {
+  -webkit-transition: 0.5s all ease;
+  transition: 0.5s all ease;
+  left: 0;
+  right: 0;
+  opacity: 1;
+  z-index: -1;
 }
 
 @media screen and (min-width: 576px) {
@@ -271,7 +294,7 @@ p {
 }
 
 .our-creations__btn-sm {
-  display: block;
+  display: inline-block;
 }
 
 .our-creations__btn-md {
@@ -598,7 +621,8 @@ header .header__toggle-btn.active {
     background: none;
   }
   header.scrolled .header__container {
-    padding-top: 2rem;
+    padding-top: 0.8rem;
+    padding-bottom: 0.6rem;
   }
   header .header__toggle-btn {
     display: none;
